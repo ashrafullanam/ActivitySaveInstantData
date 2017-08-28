@@ -51,14 +51,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
     public void sendMe(View view) {
 
         String message = editText.getText().toString();
         Intent intent = new Intent(MainActivity.this,SecondActivity.class);
         intent.putExtra("pas",message);
         startActivity(intent);
-
-
     }
 
 

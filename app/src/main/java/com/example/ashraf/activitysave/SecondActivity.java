@@ -36,6 +36,7 @@ public class SecondActivity extends AppCompatActivity {
             case R.id.dial:
                 intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:" + recivedMessage));
+                Toast.makeText(this, "Dial "+recivedMessage, Toast.LENGTH_SHORT).show();
                 /*if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }*/
@@ -45,7 +46,7 @@ public class SecondActivity extends AppCompatActivity {
 
                 intent = new Intent(Intent.ACTION_CALL);
                 intent.setData(Uri.parse("tel:" + recivedMessage));
-                Toast.makeText(this, "Run "+recivedMessage, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Call "+recivedMessage, Toast.LENGTH_SHORT).show();
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }
