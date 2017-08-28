@@ -1,5 +1,6 @@
 package com.example.ashraf.activitysave;
 
+import android.content.Intent;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,6 +50,21 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+
+    public void sendMe(View view) {
+
+        String message = editText.getText().toString();
+        Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+        intent.putExtra("pas",message);
+        startActivity(intent);
+
+
+    }
+
+
+
+
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -82,5 +98,6 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Log.e(TAG, "onDestroy called");
     }
+
 
 }
