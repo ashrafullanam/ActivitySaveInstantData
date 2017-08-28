@@ -16,4 +16,23 @@
         android:layout_marginTop="150dp"
         android:text="TextView"
         android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/dial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:text="dial"
+        android:onClick="setAction"
+        android:layout_below="@+id/textView1"
+        android:layout_toEndOf="@+id/textView1" />
+
+    <Button
+        android:id="@+id/call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dial"
+        android:layout_toStartOf="@+id/textView1"
+        android:text="call"
+        android:onClick="setAction"/>
 </RelativeLayout>
